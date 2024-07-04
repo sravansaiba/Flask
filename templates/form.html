@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1acad3;
+            margin: 0;
+            padding: 0;
+        }
+
+        .calculate {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* vh stands for viewport height */
+            background-color: #e8f0fe;
+            padding: 20px;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Control the form's maximum width */
+        }
+
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #155ab6;
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculate">
+        <div>
+            <h1>Calculate Average Marks</h1>
+            <form action="{{url_for('form')}}" method="post">
+                <input type="text" name="maths" placeholder="Maths" required="required" />
+                <input type="text" name="science" placeholder="Science" required="required" />
+                <input type="text" name="history" placeholder="History" required="required" />
+                <button type="submit">Calculate</button>
+            </form>
+            <div class="result">
+                The Average Marks is {{score}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
