@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image:linear-gradient(rgb(118, 196, 214),rgb(211, 216, 112)); */
+    /* background-image:linear-gradient(lightpink,darkblue); */
+    background-color: lightgrey;
+}
+
+.element{
+    height: 400px;
+    width: 500px;
+    background-color:lightcoral;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 3rem;
+    color:black;
+    animation-name: anime;
+    animation-duration:3s;
+    animation-delay: 0s;
+    animation-timing-function:ease-out;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 2;
+    animation-direction:alternate-reverse;
+    animation-play-state:unset;
+    /* position:fixed; */
+    border-radius: 0rem;
+}
+
+@keyframes anime {
+    0%{
+        left:0;
+        background-color:blueviolet;
+        color: black;
+        background-image: linear-gradient(lightcoral,lightblue);
+        top:0;
+        border-radius:0;
+     
+    }
+
+    50%{
+        content: "Luffy";
+        scale: 2;
+        left: 40%;
+       border-radius:50%;
+       background-color:darkred;
+       color:darkblue;
+       background-image:linear-gradient(lightblue,lightpink);
+       /* background-image: url("https://tse1.mm.bing.net/th?id=OIP.3b9e0JRbb0QtOzI3b5SbnQHaE8&pid=Api&P=0&h=180"); */
+       rotate: 0;
+       top: 50%;
+    }
+    100%{
+      left:40%;
+      rotate: 360deg;
+      background-color:greenyellow;
+      color:black;
+      border-radius:50%;
+      top:50%;
+      background-image: linear-gradient(rgb(12, 236, 183),white);
+      /* background-image: url("https://tse1.mm.bing.net/th?id=OIP.3b9e0JRbb0QtOzI3b5SbnQHaE8&pid=Api&P=0&h=180"); */
+
+    } 
+
+
+    
+}
+
+
+
